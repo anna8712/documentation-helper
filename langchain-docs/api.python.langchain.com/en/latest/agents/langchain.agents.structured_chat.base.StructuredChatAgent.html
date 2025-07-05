@@ -1,0 +1,569 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+        <title>langchain.agents.structured_chat.base.StructuredChatAgent &mdash; 🦜🔗 LangChain 0.2.6</title>
+    
+    <link rel="canonical"
+          href="https://api.python.langchain.com/en/latest/agents/langchain.agents.structured_chat.base.StructuredChatAgent.html"/>
+
+    
+
+    <link rel="stylesheet"
+          href="../_static/css/vendor/bootstrap.min.css"
+          type="text/css"/>
+            <link rel="stylesheet" href="../_static/pygments.css" type="text/css"/>
+            <link rel="stylesheet" href="../_static/css/theme.css" type="text/css"/>
+            <link rel="stylesheet" href="../_static/autodoc_pydantic.css" type="text/css"/>
+            <link rel="stylesheet" href="../_static/copybutton.css" type="text/css"/>
+            <link rel="stylesheet" href="../_static/sphinx-dropdown.css" type="text/css"/>
+            <link rel="stylesheet" href="../_static/panels-bootstrap.min.css" type="text/css"/>
+            <link rel="stylesheet" href="../_static/css/custom.css" type="text/css"/>
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css"/>
+    <script id="documentation_options" data-url_root="../"
+            src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script> 
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="langchain" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/agents/langchain.agents.structured_chat.base.StructuredChatAgent.html" /></head>
+<body>
+
+
+<nav id="navbar" class="sk-docs-navbar navbar navbar-expand-md navbar-light bg-light py-0">
+  <div class="container-fluid sk-docs-container px-0">
+    <button
+      id="sk-navbar-toggler"
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="sk-navbar-collapse collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="../langchain_api_reference.html">LangChain</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="../core_api_reference.html">Core</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="../community_api_reference.html">Community</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="../experimental_api_reference.html">Experimental</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="../text_splitters_api_reference.html">Text splitters</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../ai21_api_reference.html">ai21</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../airbyte_api_reference.html">airbyte</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../anthropic_api_reference.html">anthropic</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../astradb_api_reference.html">astradb</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../aws_api_reference.html">aws</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../azure_dynamic_sessions_api_reference.html">azure-dynamic-sessions</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../chroma_api_reference.html">chroma</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../cohere_api_reference.html">cohere</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../couchbase_api_reference.html">couchbase</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../elasticsearch_api_reference.html">elasticsearch</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../exa_api_reference.html">exa</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../fireworks_api_reference.html">fireworks</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../google_genai_api_reference.html">google-genai</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../google_vertexai_api_reference.html">google-vertexai</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../groq_api_reference.html">groq</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../huggingface_api_reference.html">huggingface</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../ibm_api_reference.html">ibm</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../milvus_api_reference.html">milvus</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../mistralai_api_reference.html">mistralai</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../mongodb_api_reference.html">mongodb</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../nomic_api_reference.html">nomic</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../nvidia_ai_endpoints_api_reference.html">nvidia-ai-endpoints</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../openai_api_reference.html">openai</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../pinecone_api_reference.html">pinecone</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../postgres_api_reference.html">postgres</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../prompty_api_reference.html">prompty</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../qdrant_api_reference.html">qdrant</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../robocorp_api_reference.html">robocorp</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../together_api_reference.html">together</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../voyageai_api_reference.html">voyageai</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="../weaviate_api_reference.html">weaviate</a>
+        </li>
+        <li class="nav-item dropdown nav-more-item-dropdown">
+          <a class="sk-nav-link nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Partner libs</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="sk-nav-dropdown-item dropdown-item" href="../ai21_api_reference.html">ai21</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../airbyte_api_reference.html">airbyte</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../anthropic_api_reference.html">anthropic</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../astradb_api_reference.html">astradb</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../aws_api_reference.html">aws</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../azure_dynamic_sessions_api_reference.html">azure-dynamic-sessions</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../chroma_api_reference.html">chroma</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../cohere_api_reference.html">cohere</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../couchbase_api_reference.html">couchbase</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../elasticsearch_api_reference.html">elasticsearch</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../exa_api_reference.html">exa</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../fireworks_api_reference.html">fireworks</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../google_genai_api_reference.html">google-genai</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../google_vertexai_api_reference.html">google-vertexai</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../groq_api_reference.html">groq</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../huggingface_api_reference.html">huggingface</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../ibm_api_reference.html">ibm</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../milvus_api_reference.html">milvus</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../mistralai_api_reference.html">mistralai</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../mongodb_api_reference.html">mongodb</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../nomic_api_reference.html">nomic</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../nvidia_ai_endpoints_api_reference.html">nvidia-ai-endpoints</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../openai_api_reference.html">openai</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../pinecone_api_reference.html">pinecone</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../postgres_api_reference.html">postgres</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../prompty_api_reference.html">prompty</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../qdrant_api_reference.html">qdrant</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../robocorp_api_reference.html">robocorp</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../together_api_reference.html">together</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../voyageai_api_reference.html">voyageai</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="../weaviate_api_reference.html">weaviate</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" target="_blank" rel="noopener noreferrer" href="https://python.langchain.com/">Docs</a>
+        </li>
+      </ul>
+      <div id="searchbox" role="search">
+          <div class="searchformwrapper">
+          <form class="search" action="../search.html" method="get">
+            <input class="sk-search-text-input" type="text" name="q" aria-labelledby="searchlabel" />
+            <input class="sk-search-text-btn" type="submit" value="Go" />
+          </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    <div class="d-flex" id="sk-doc-wrapper">
+        <input type="checkbox" name="sk-toggle-checkbox" id="sk-toggle-checkbox">
+        <label id="sk-sidemenu-toggle" class="sk-btn-toggle-toc btn sk-btn-primary"
+               for="sk-toggle-checkbox">Toggle Menu</label>
+        <div id="sk-sidebar-wrapper" class="border-right">
+            <div class="sk-sidebar-toc-wrapper">
+                    <div class="sk-sidebar-toc">
+                        <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain.agents.structured_chat.base</span></code>.StructuredChatAgent</a><ul>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent</span></code></a><ul>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.allowed_tools"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.allowed_tools</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.llm_chain"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.llm_chain</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.output_parser"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.output_parser</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.aplan"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.aplan()</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.create_prompt"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.create_prompt()</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.from_llm_and_tools"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.from_llm_and_tools()</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.get_allowed_tools"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.get_allowed_tools()</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.get_full_inputs"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.get_full_inputs()</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.plan"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.plan()</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.return_stopped_response"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.return_stopped_response()</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.save"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.save()</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.tool_run_logging_kwargs"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.tool_run_logging_kwargs()</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.llm_prefix"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.llm_prefix</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.observation_prefix"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.observation_prefix</span></code></a></li>
+<li><a class="reference internal" href="#langchain.agents.structured_chat.base.StructuredChatAgent.return_values"><code class="docutils literal notranslate"><span class="pre">StructuredChatAgent.return_values</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                    </div>
+            </div>
+        </div>
+        <div id="sk-page-content-wrapper">
+            <div class="sk-page-content container-fluid body px-md-3" role="main">
+                
+  <section id="langchain-agents-structured-chat-base-structuredchatagent">
+<h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain.agents.structured_chat.base</span></code>.StructuredChatAgent<a class="headerlink" href="#langchain-agents-structured-chat-base-structuredchatagent" title="Permalink to this heading">¶</a></h1>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">langchain.agents.structured_chat.base.</span></span><span class="sig-name descname"><span class="pre">StructuredChatAgent</span></span><a class="reference internal" href="../_modules/langchain/agents/structured_chat/base.html#StructuredChatAgent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="langchain.agents.agent.Agent.html#langchain.agents.agent.Agent" title="langchain.agents.agent.Agent"><code class="xref py py-class docutils literal notranslate"><span class="pre">Agent</span></code></a></p>
+<p>[<em>Deprecated</em>] Structured Chat Agent.</p>
+<p class="rubric">Notes</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.1.0: </span>Use create_structured_chat_agent instead.</p>
+</div>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises ValidationError if the input data cannot be parsed to form a valid model.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.allowed_tools">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">allowed_tools</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.allowed_tools" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allowed tools for the agent. If None, all tools are allowed.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.llm_chain">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">llm_chain</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../chains/langchain.chains.llm.LLMChain.html#langchain.chains.llm.LLMChain" title="langchain.chains.llm.LLMChain"><span class="pre">LLMChain</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.llm_chain" title="Permalink to this definition">¶</a></dt>
+<dd><p>LLMChain to use for agent.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.output_parser">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_parser</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="langchain.agents.agent.AgentOutputParser.html#langchain.agents.agent.AgentOutputParser" title="langchain.agents.agent.AgentOutputParser"><span class="pre">AgentOutputParser</span></a></em><em class="property"> <span class="pre">[Optional]</span></em><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.output_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output parser for the agent.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.aplan">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aplan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intermediate_steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="langchain_core.agents.AgentAction.html#langchain_core.agents.AgentAction" title="langchain_core.agents.AgentAction"><span class="pre">AgentAction</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callbacks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../callbacks/langchain_core.callbacks.base.BaseCallbackHandler.html#langchain_core.callbacks.base.BaseCallbackHandler" title="langchain_core.callbacks.base.BaseCallbackHandler"><span class="pre">BaseCallbackHandler</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../callbacks/langchain_core.callbacks.base.BaseCallbackManager.html#langchain_core.callbacks.base.BaseCallbackManager" title="langchain_core.callbacks.base.BaseCallbackManager"><span class="pre">BaseCallbackManager</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="langchain_core.agents.AgentAction.html#langchain_core.agents.AgentAction" title="langchain_core.agents.AgentAction"><span class="pre">AgentAction</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="langchain_core.agents.AgentFinish.html#langchain_core.agents.AgentFinish" title="langchain_core.agents.AgentFinish"><span class="pre">AgentFinish</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.aplan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Async given input, decided what to do.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>intermediate_steps</strong> (<em>List</em><em>[</em><em>Tuple</em><em>[</em><a class="reference internal" href="langchain_core.agents.AgentAction.html#langchain_core.agents.AgentAction" title="langchain_core.agents.AgentAction"><em>AgentAction</em></a><em>, </em><em>str</em><em>]</em><em>]</em>) – Steps the LLM has taken to date,
+along with observations.</p></li>
+<li><p><strong>callbacks</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>List</em><em>[</em><a class="reference internal" href="../callbacks/langchain_core.callbacks.base.BaseCallbackHandler.html#langchain_core.callbacks.base.BaseCallbackHandler" title="langchain_core.callbacks.base.BaseCallbackHandler"><em>BaseCallbackHandler</em></a><em>]</em><em>, </em><a class="reference internal" href="../callbacks/langchain_core.callbacks.base.BaseCallbackManager.html#langchain_core.callbacks.base.BaseCallbackManager" title="langchain_core.callbacks.base.BaseCallbackManager"><em>BaseCallbackManager</em></a><em>]</em><em>]</em>) – Callbacks to run.</p></li>
+<li><p><strong>**kwargs</strong> (<em>Any</em>) – User inputs.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Action specifying what tool to use.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><em>Union</em>[<a class="reference internal" href="langchain_core.agents.AgentAction.html#langchain_core.agents.AgentAction" title="langchain_core.agents.AgentAction"><em>AgentAction</em></a>, <a class="reference internal" href="langchain_core.agents.AgentFinish.html#langchain_core.agents.AgentFinish" title="langchain_core.agents.AgentFinish"><em>AgentFinish</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.create_prompt">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_prompt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tools</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../tools/langchain_core.tools.BaseTool.html#langchain_core.tools.BaseTool" title="langchain_core.tools.BaseTool"><span class="pre">BaseTool</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Respond</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">human</span> <span class="pre">as</span> <span class="pre">helpfully</span> <span class="pre">and</span> <span class="pre">accurately</span> <span class="pre">as</span> <span class="pre">possible.</span> <span class="pre">You</span> <span class="pre">have</span> <span class="pre">access</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">following</span> <span class="pre">tools:'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Begin!</span> <span class="pre">Reminder</span> <span class="pre">to</span> <span class="pre">ALWAYS</span> <span class="pre">respond</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">valid</span> <span class="pre">json</span> <span class="pre">blob</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">single</span> <span class="pre">action.</span> <span class="pre">Use</span> <span class="pre">tools</span> <span class="pre">if</span> <span class="pre">necessary.</span> <span class="pre">Respond</span> <span class="pre">directly</span> <span class="pre">if</span> <span class="pre">appropriate.</span> <span class="pre">Format</span> <span class="pre">is</span> <span class="pre">Action:```$JSON_BLOB```then</span> <span class="pre">Observation:.\nThought:'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">human_message_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'{input}\n\n{agent_scratchpad}'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format_instructions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Use</span> <span class="pre">a</span> <span class="pre">json</span> <span class="pre">blob</span> <span class="pre">to</span> <span class="pre">specify</span> <span class="pre">a</span> <span class="pre">tool</span> <span class="pre">by</span> <span class="pre">providing</span> <span class="pre">an</span> <span class="pre">action</span> <span class="pre">key</span> <span class="pre">(tool</span> <span class="pre">name)</span> <span class="pre">and</span> <span class="pre">an</span> <span class="pre">action_input</span> <span class="pre">key</span> <span class="pre">(tool</span> <span class="pre">input).\n\nValid</span> <span class="pre">&quot;action&quot;</span> <span class="pre">values:</span> <span class="pre">&quot;Final</span> <span class="pre">Answer&quot;</span> <span class="pre">or</span> <span class="pre">{tool_names}\n\nProvide</span> <span class="pre">only</span> <span class="pre">ONE</span> <span class="pre">action</span> <span class="pre">per</span> <span class="pre">$JSON_BLOB,</span> <span class="pre">as</span> <span class="pre">shown:\n\n```\n{{{{\n</span>&#160; <span class="pre">&quot;action&quot;:</span> <span class="pre">$TOOL_NAME,\n</span>&#160; <span class="pre">&quot;action_input&quot;:</span> <span class="pre">$INPUT\n}}}}\n```\n\nFollow</span> <span class="pre">this</span> <span class="pre">format:\n\nQuestion:</span> <span class="pre">input</span> <span class="pre">question</span> <span class="pre">to</span> <span class="pre">answer\nThought:</span> <span class="pre">consider</span> <span class="pre">previous</span> <span class="pre">and</span> <span class="pre">subsequent</span> <span class="pre">steps\nAction:\n```\n$JSON_BLOB\n```\nObservation:</span> <span class="pre">action</span> <span class="pre">result\n...</span> <span class="pre">(repeat</span> <span class="pre">Thought/Action/Observation</span> <span class="pre">N</span> <span class="pre">times)\nThought:</span> <span class="pre">I</span> <span class="pre">know</span> <span class="pre">what</span> <span class="pre">to</span> <span class="pre">respond\nAction:\n```\n{{{{\n</span>&#160; <span class="pre">&quot;action&quot;:</span> <span class="pre">&quot;Final</span> <span class="pre">Answer&quot;,\n</span>&#160; <span class="pre">&quot;action_input&quot;:</span> <span class="pre">&quot;Final</span> <span class="pre">response</span> <span class="pre">to</span> <span class="pre">human&quot;\n}}}}\n```'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_prompts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../prompts/langchain_core.prompts.base.BasePromptTemplate.html#langchain_core.prompts.base.BasePromptTemplate" title="langchain_core.prompts.base.BasePromptTemplate"><span class="pre">BasePromptTemplate</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../prompts/langchain_core.prompts.base.BasePromptTemplate.html#langchain_core.prompts.base.BasePromptTemplate" title="langchain_core.prompts.base.BasePromptTemplate"><span class="pre">BasePromptTemplate</span></a></span></span><a class="reference internal" href="../_modules/langchain/agents/structured_chat/base.html#StructuredChatAgent.create_prompt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.create_prompt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a prompt for this class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tools</strong> (<em>Sequence</em><em>[</em><a class="reference internal" href="../tools/langchain_core.tools.BaseTool.html#langchain_core.tools.BaseTool" title="langchain_core.tools.BaseTool"><em>BaseTool</em></a><em>]</em>) – Tools to use.</p></li>
+<li><p><strong>prefix</strong> (<em>str</em>) – </p></li>
+<li><p><strong>suffix</strong> (<em>str</em>) – </p></li>
+<li><p><strong>human_message_template</strong> (<em>str</em>) – </p></li>
+<li><p><strong>format_instructions</strong> (<em>str</em>) – </p></li>
+<li><p><strong>input_variables</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>memory_prompts</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference internal" href="../prompts/langchain_core.prompts.base.BasePromptTemplate.html#langchain_core.prompts.base.BasePromptTemplate" title="langchain_core.prompts.base.BasePromptTemplate"><em>BasePromptTemplate</em></a><em>]</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Prompt template.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../prompts/langchain_core.prompts.base.BasePromptTemplate.html#langchain_core.prompts.base.BasePromptTemplate" title="langchain_core.prompts.base.BasePromptTemplate">BasePromptTemplate</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.from_llm_and_tools">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_llm_and_tools</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">llm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../language_models/langchain_core.language_models.base.BaseLanguageModel.html#langchain_core.language_models.base.BaseLanguageModel" title="langchain_core.language_models.base.BaseLanguageModel"><span class="pre">BaseLanguageModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tools</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../tools/langchain_core.tools.BaseTool.html#langchain_core.tools.BaseTool" title="langchain_core.tools.BaseTool"><span class="pre">BaseTool</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../callbacks/langchain_core.callbacks.base.BaseCallbackManager.html#langchain_core.callbacks.base.BaseCallbackManager" title="langchain_core.callbacks.base.BaseCallbackManager"><span class="pre">BaseCallbackManager</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_parser</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="langchain.agents.agent.AgentOutputParser.html#langchain.agents.agent.AgentOutputParser" title="langchain.agents.agent.AgentOutputParser"><span class="pre">AgentOutputParser</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Respond</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">human</span> <span class="pre">as</span> <span class="pre">helpfully</span> <span class="pre">and</span> <span class="pre">accurately</span> <span class="pre">as</span> <span class="pre">possible.</span> <span class="pre">You</span> <span class="pre">have</span> <span class="pre">access</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">following</span> <span class="pre">tools:'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Begin!</span> <span class="pre">Reminder</span> <span class="pre">to</span> <span class="pre">ALWAYS</span> <span class="pre">respond</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">valid</span> <span class="pre">json</span> <span class="pre">blob</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">single</span> <span class="pre">action.</span> <span class="pre">Use</span> <span class="pre">tools</span> <span class="pre">if</span> <span class="pre">necessary.</span> <span class="pre">Respond</span> <span class="pre">directly</span> <span class="pre">if</span> <span class="pre">appropriate.</span> <span class="pre">Format</span> <span class="pre">is</span> <span class="pre">Action:```$JSON_BLOB```then</span> <span class="pre">Observation:.\nThought:'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">human_message_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'{input}\n\n{agent_scratchpad}'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format_instructions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Use</span> <span class="pre">a</span> <span class="pre">json</span> <span class="pre">blob</span> <span class="pre">to</span> <span class="pre">specify</span> <span class="pre">a</span> <span class="pre">tool</span> <span class="pre">by</span> <span class="pre">providing</span> <span class="pre">an</span> <span class="pre">action</span> <span class="pre">key</span> <span class="pre">(tool</span> <span class="pre">name)</span> <span class="pre">and</span> <span class="pre">an</span> <span class="pre">action_input</span> <span class="pre">key</span> <span class="pre">(tool</span> <span class="pre">input).\n\nValid</span> <span class="pre">&quot;action&quot;</span> <span class="pre">values:</span> <span class="pre">&quot;Final</span> <span class="pre">Answer&quot;</span> <span class="pre">or</span> <span class="pre">{tool_names}\n\nProvide</span> <span class="pre">only</span> <span class="pre">ONE</span> <span class="pre">action</span> <span class="pre">per</span> <span class="pre">$JSON_BLOB,</span> <span class="pre">as</span> <span class="pre">shown:\n\n```\n{{{{\n</span>&#160; <span class="pre">&quot;action&quot;:</span> <span class="pre">$TOOL_NAME,\n</span>&#160; <span class="pre">&quot;action_input&quot;:</span> <span class="pre">$INPUT\n}}}}\n```\n\nFollow</span> <span class="pre">this</span> <span class="pre">format:\n\nQuestion:</span> <span class="pre">input</span> <span class="pre">question</span> <span class="pre">to</span> <span class="pre">answer\nThought:</span> <span class="pre">consider</span> <span class="pre">previous</span> <span class="pre">and</span> <span class="pre">subsequent</span> <span class="pre">steps\nAction:\n```\n$JSON_BLOB\n```\nObservation:</span> <span class="pre">action</span> <span class="pre">result\n...</span> <span class="pre">(repeat</span> <span class="pre">Thought/Action/Observation</span> <span class="pre">N</span> <span class="pre">times)\nThought:</span> <span class="pre">I</span> <span class="pre">know</span> <span class="pre">what</span> <span class="pre">to</span> <span class="pre">respond\nAction:\n```\n{{{{\n</span>&#160; <span class="pre">&quot;action&quot;:</span> <span class="pre">&quot;Final</span> <span class="pre">Answer&quot;,\n</span>&#160; <span class="pre">&quot;action_input&quot;:</span> <span class="pre">&quot;Final</span> <span class="pre">response</span> <span class="pre">to</span> <span class="pre">human&quot;\n}}}}\n```'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_prompts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../prompts/langchain_core.prompts.base.BasePromptTemplate.html#langchain_core.prompts.base.BasePromptTemplate" title="langchain_core.prompts.base.BasePromptTemplate"><span class="pre">BasePromptTemplate</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="langchain.agents.agent.Agent.html#langchain.agents.agent.Agent" title="langchain.agents.agent.Agent"><span class="pre">Agent</span></a></span></span><a class="reference internal" href="../_modules/langchain/agents/structured_chat/base.html#StructuredChatAgent.from_llm_and_tools"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.from_llm_and_tools" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct an agent from an LLM and tools.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>llm</strong> (<a class="reference internal" href="../language_models/langchain_core.language_models.base.BaseLanguageModel.html#langchain_core.language_models.base.BaseLanguageModel" title="langchain_core.language_models.base.BaseLanguageModel"><em>BaseLanguageModel</em></a>) – </p></li>
+<li><p><strong>tools</strong> (<em>Sequence</em><em>[</em><a class="reference internal" href="../tools/langchain_core.tools.BaseTool.html#langchain_core.tools.BaseTool" title="langchain_core.tools.BaseTool"><em>BaseTool</em></a><em>]</em>) – </p></li>
+<li><p><strong>callback_manager</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../callbacks/langchain_core.callbacks.base.BaseCallbackManager.html#langchain_core.callbacks.base.BaseCallbackManager" title="langchain_core.callbacks.base.BaseCallbackManager"><em>BaseCallbackManager</em></a><em>]</em>) – </p></li>
+<li><p><strong>output_parser</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="langchain.agents.agent.AgentOutputParser.html#langchain.agents.agent.AgentOutputParser" title="langchain.agents.agent.AgentOutputParser"><em>AgentOutputParser</em></a><em>]</em>) – </p></li>
+<li><p><strong>prefix</strong> (<em>str</em>) – </p></li>
+<li><p><strong>suffix</strong> (<em>str</em>) – </p></li>
+<li><p><strong>human_message_template</strong> (<em>str</em>) – </p></li>
+<li><p><strong>format_instructions</strong> (<em>str</em>) – </p></li>
+<li><p><strong>input_variables</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>memory_prompts</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference internal" href="../prompts/langchain_core.prompts.base.BasePromptTemplate.html#langchain_core.prompts.base.BasePromptTemplate" title="langchain_core.prompts.base.BasePromptTemplate"><em>BasePromptTemplate</em></a><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="langchain.agents.agent.Agent.html#langchain.agents.agent.Agent" title="langchain.agents.agent.Agent"><em>Agent</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.get_allowed_tools">
+<span class="sig-name descname"><span class="pre">get_allowed_tools</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.get_allowed_tools" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get allowed tools.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><em>Optional</em>[<em>List</em>[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.get_full_inputs">
+<span class="sig-name descname"><span class="pre">get_full_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intermediate_steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="langchain_core.agents.AgentAction.html#langchain_core.agents.AgentAction" title="langchain_core.agents.AgentAction"><span class="pre">AgentAction</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.get_full_inputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the full inputs for the LLMChain from intermediate steps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>intermediate_steps</strong> (<em>List</em><em>[</em><em>Tuple</em><em>[</em><a class="reference internal" href="langchain_core.agents.AgentAction.html#langchain_core.agents.AgentAction" title="langchain_core.agents.AgentAction"><em>AgentAction</em></a><em>, </em><em>str</em><em>]</em><em>]</em>) – Steps the LLM has taken to date,
+along with observations.</p></li>
+<li><p><strong>**kwargs</strong> (<em>Any</em>) – User inputs.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Full inputs for the LLMChain.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict[str, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.plan">
+<span class="sig-name descname"><span class="pre">plan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intermediate_steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="langchain_core.agents.AgentAction.html#langchain_core.agents.AgentAction" title="langchain_core.agents.AgentAction"><span class="pre">AgentAction</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callbacks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../callbacks/langchain_core.callbacks.base.BaseCallbackHandler.html#langchain_core.callbacks.base.BaseCallbackHandler" title="langchain_core.callbacks.base.BaseCallbackHandler"><span class="pre">BaseCallbackHandler</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../callbacks/langchain_core.callbacks.base.BaseCallbackManager.html#langchain_core.callbacks.base.BaseCallbackManager" title="langchain_core.callbacks.base.BaseCallbackManager"><span class="pre">BaseCallbackManager</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="langchain_core.agents.AgentAction.html#langchain_core.agents.AgentAction" title="langchain_core.agents.AgentAction"><span class="pre">AgentAction</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="langchain_core.agents.AgentFinish.html#langchain_core.agents.AgentFinish" title="langchain_core.agents.AgentFinish"><span class="pre">AgentFinish</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given input, decided what to do.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>intermediate_steps</strong> (<em>List</em><em>[</em><em>Tuple</em><em>[</em><a class="reference internal" href="langchain_core.agents.AgentAction.html#langchain_core.agents.AgentAction" title="langchain_core.agents.AgentAction"><em>AgentAction</em></a><em>, </em><em>str</em><em>]</em><em>]</em>) – Steps the LLM has taken to date,
+along with observations.</p></li>
+<li><p><strong>callbacks</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>List</em><em>[</em><a class="reference internal" href="../callbacks/langchain_core.callbacks.base.BaseCallbackHandler.html#langchain_core.callbacks.base.BaseCallbackHandler" title="langchain_core.callbacks.base.BaseCallbackHandler"><em>BaseCallbackHandler</em></a><em>]</em><em>, </em><a class="reference internal" href="../callbacks/langchain_core.callbacks.base.BaseCallbackManager.html#langchain_core.callbacks.base.BaseCallbackManager" title="langchain_core.callbacks.base.BaseCallbackManager"><em>BaseCallbackManager</em></a><em>]</em><em>]</em>) – Callbacks to run.</p></li>
+<li><p><strong>**kwargs</strong> (<em>Any</em>) – User inputs.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Action specifying what tool to use.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><em>Union</em>[<a class="reference internal" href="langchain_core.agents.AgentAction.html#langchain_core.agents.AgentAction" title="langchain_core.agents.AgentAction"><em>AgentAction</em></a>, <a class="reference internal" href="langchain_core.agents.AgentFinish.html#langchain_core.agents.AgentFinish" title="langchain_core.agents.AgentFinish"><em>AgentFinish</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.return_stopped_response">
+<span class="sig-name descname"><span class="pre">return_stopped_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">early_stopping_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intermediate_steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="langchain_core.agents.AgentAction.html#langchain_core.agents.AgentAction" title="langchain_core.agents.AgentAction"><span class="pre">AgentAction</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="langchain_core.agents.AgentFinish.html#langchain_core.agents.AgentFinish" title="langchain_core.agents.AgentFinish"><span class="pre">AgentFinish</span></a></span></span><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.return_stopped_response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return response when agent has been stopped due to max iterations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>early_stopping_method</strong> (<em>str</em>) – Method to use for early stopping.</p></li>
+<li><p><strong>intermediate_steps</strong> (<em>List</em><em>[</em><em>Tuple</em><em>[</em><a class="reference internal" href="langchain_core.agents.AgentAction.html#langchain_core.agents.AgentAction" title="langchain_core.agents.AgentAction"><em>AgentAction</em></a><em>, </em><em>str</em><em>]</em><em>]</em>) – Steps the LLM has taken to date,
+along with observations.</p></li>
+<li><p><strong>**kwargs</strong> (<em>Any</em>) – User inputs.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Agent finish object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="langchain_core.agents.AgentFinish.html#langchain_core.agents.AgentFinish" title="langchain_core.agents.AgentFinish">AgentFinish</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If <cite>early_stopping_method</cite> is not in [‘force’, ‘generate’].</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Path</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the agent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<em>Union</em><em>[</em><em>Path</em><em>, </em><em>str</em><em>]</em>) – Path to file to save the agent to.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p>Example:
+.. code-block:: python</p>
+<blockquote>
+<div><p># If working with agent executor
+agent.agent.save(file_path=”path/agent.yaml”)</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.tool_run_logging_kwargs">
+<span class="sig-name descname"><span class="pre">tool_run_logging_kwargs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span></span></span><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.tool_run_logging_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return logging kwargs for tool run.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><em>Dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.llm_prefix">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">llm_prefix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.llm_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prefix to append the llm call with.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.observation_prefix">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">observation_prefix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.observation_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prefix to append the observation with.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="langchain.agents.structured_chat.base.StructuredChatAgent.return_values">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">return_values</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#langchain.agents.structured_chat.base.StructuredChatAgent.return_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return values of the agent.</p>
+</dd></dl>
+
+</dd></dl>
+
+<h1>Examples using StructuredChatAgent<a class="headerlink" href="#langchain-agents-structured-chat-base-structuredchatagent" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://python.langchain.com/v0.2/docs/integrations/tools/reddit_search/">Reddit Search </a></p></li>
+</ul>
+</section>
+
+
+            </div>
+            <div class="container">
+                <footer class="sk-content-footer">
+                                &copy; 2023, LangChain, Inc.
+                                    .
+                            Last updated
+                                on Jun 28, 2024.
+                </footer>
+            </div>
+        </div>
+    </div>
+<script src="../_static/js/vendor/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+    /* Add a [>>>] button on the top-right corner of code samples to hide
+     * the >>> and ... prompts and the output and thus make the code
+     * copyable. */
+    var div = $('.highlight-python .highlight,' +
+                '.highlight-python3 .highlight,' +
+                '.highlight-pycon .highlight,' +
+		'.highlight-default .highlight')
+    var pre = div.find('pre');
+
+    // get the styles from the current theme
+    pre.parent().parent().css('position', 'relative');
+    var hide_text = 'Hide prompts and outputs';
+    var show_text = 'Show prompts and outputs';
+
+    // create and add the button to all the code blocks that contain >>>
+    div.each(function(index) {
+        var jthis = $(this);
+        if (jthis.find('.gp').length > 0) {
+            var button = $('<span class="copybutton">&gt;&gt;&gt;</span>');
+            button.attr('title', hide_text);
+            button.data('hidden', 'false');
+            jthis.prepend(button);
+        }
+        // tracebacks (.gt) contain bare text elements that need to be
+        // wrapped in a span to work with .nextUntil() (see later)
+        jthis.find('pre:has(.gt)').contents().filter(function() {
+            return ((this.nodeType == 3) && (this.data.trim().length > 0));
+        }).wrap('<span>');
+    });
+
+    // define the behavior of the button when it's clicked
+    $('.copybutton').click(function(e){
+        e.preventDefault();
+        var button = $(this);
+        if (button.data('hidden') === 'false') {
+            // hide the code output
+            button.parent().find('.go, .gp, .gt').hide();
+            button.next('pre').find('.gt').nextUntil('.gp, .go').css('visibility', 'hidden');
+            button.css('text-decoration', 'line-through');
+            button.attr('title', show_text);
+            button.data('hidden', 'true');
+        } else {
+            // show the code output
+            button.parent().find('.go, .gp, .gt').show();
+            button.next('pre').find('.gt').nextUntil('.gp, .go').css('visibility', 'visible');
+            button.css('text-decoration', 'none');
+            button.attr('title', hide_text);
+            button.data('hidden', 'false');
+        }
+    });
+
+	/*** Add permalink buttons next to glossary terms ***/
+	$('dl.glossary > dt[id]').append(function() {
+		return ('<a class="headerlink" href="#' +
+			    this.getAttribute('id') +
+			    '" title="Permalink to this term">¶</a>');
+	});
+});
+
+</script>
+    
+</body>
+</html>

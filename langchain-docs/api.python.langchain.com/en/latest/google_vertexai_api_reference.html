@@ -1,0 +1,619 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+        <title>langchain_google_vertexai 1.0.6 &mdash; 🦜🔗 LangChain 0.2.6</title>
+    
+    <link rel="canonical"
+          href="https://api.python.langchain.com/en/latest/google_vertexai_api_reference.html"/>
+
+    
+
+    <link rel="stylesheet"
+          href="_static/css/vendor/bootstrap.min.css"
+          type="text/css"/>
+            <link rel="stylesheet" href="_static/pygments.css" type="text/css"/>
+            <link rel="stylesheet" href="_static/css/theme.css" type="text/css"/>
+            <link rel="stylesheet" href="_static/autodoc_pydantic.css" type="text/css"/>
+            <link rel="stylesheet" href="_static/copybutton.css" type="text/css"/>
+            <link rel="stylesheet" href="_static/sphinx-dropdown.css" type="text/css"/>
+            <link rel="stylesheet" href="_static/panels-bootstrap.min.css" type="text/css"/>
+            <link rel="stylesheet" href="_static/css/custom.css" type="text/css"/>
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css"/>
+    <script id="documentation_options" data-url_root="./"
+            src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script> 
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="langchain" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/google_vertexai_api_reference.html" /></head>
+<body>
+
+
+<nav id="navbar" class="sk-docs-navbar navbar navbar-expand-md navbar-light bg-light py-0">
+  <div class="container-fluid sk-docs-container px-0">
+    <button
+      id="sk-navbar-toggler"
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="sk-navbar-collapse collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="langchain_api_reference.html">LangChain</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="core_api_reference.html">Core</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="community_api_reference.html">Community</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="experimental_api_reference.html">Experimental</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="text_splitters_api_reference.html">Text splitters</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="ai21_api_reference.html">ai21</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="airbyte_api_reference.html">airbyte</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="anthropic_api_reference.html">anthropic</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="astradb_api_reference.html">astradb</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="aws_api_reference.html">aws</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="azure_dynamic_sessions_api_reference.html">azure-dynamic-sessions</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="chroma_api_reference.html">chroma</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="cohere_api_reference.html">cohere</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="couchbase_api_reference.html">couchbase</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="elasticsearch_api_reference.html">elasticsearch</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="exa_api_reference.html">exa</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="fireworks_api_reference.html">fireworks</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="google_genai_api_reference.html">google-genai</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="#">google-vertexai</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="groq_api_reference.html">groq</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="huggingface_api_reference.html">huggingface</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="ibm_api_reference.html">ibm</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="milvus_api_reference.html">milvus</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="mistralai_api_reference.html">mistralai</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="mongodb_api_reference.html">mongodb</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="nomic_api_reference.html">nomic</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="nvidia_ai_endpoints_api_reference.html">nvidia-ai-endpoints</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="openai_api_reference.html">openai</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="pinecone_api_reference.html">pinecone</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="postgres_api_reference.html">postgres</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="prompty_api_reference.html">prompty</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="qdrant_api_reference.html">qdrant</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="robocorp_api_reference.html">robocorp</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="together_api_reference.html">together</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="voyageai_api_reference.html">voyageai</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link nav-more-item-mobile-items" href="weaviate_api_reference.html">weaviate</a>
+        </li>
+        <li class="nav-item dropdown nav-more-item-dropdown">
+          <a class="sk-nav-link nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Partner libs</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="sk-nav-dropdown-item dropdown-item" href="ai21_api_reference.html">ai21</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="airbyte_api_reference.html">airbyte</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="anthropic_api_reference.html">anthropic</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="astradb_api_reference.html">astradb</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="aws_api_reference.html">aws</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="azure_dynamic_sessions_api_reference.html">azure-dynamic-sessions</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="chroma_api_reference.html">chroma</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="cohere_api_reference.html">cohere</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="couchbase_api_reference.html">couchbase</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="elasticsearch_api_reference.html">elasticsearch</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="exa_api_reference.html">exa</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="fireworks_api_reference.html">fireworks</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="google_genai_api_reference.html">google-genai</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="#">google-vertexai</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="groq_api_reference.html">groq</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="huggingface_api_reference.html">huggingface</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="ibm_api_reference.html">ibm</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="milvus_api_reference.html">milvus</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="mistralai_api_reference.html">mistralai</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="mongodb_api_reference.html">mongodb</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="nomic_api_reference.html">nomic</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="nvidia_ai_endpoints_api_reference.html">nvidia-ai-endpoints</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="openai_api_reference.html">openai</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="pinecone_api_reference.html">pinecone</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="postgres_api_reference.html">postgres</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="prompty_api_reference.html">prompty</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="qdrant_api_reference.html">qdrant</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="robocorp_api_reference.html">robocorp</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="together_api_reference.html">together</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="voyageai_api_reference.html">voyageai</a>
+              <a class="sk-nav-dropdown-item dropdown-item" href="weaviate_api_reference.html">weaviate</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" target="_blank" rel="noopener noreferrer" href="https://python.langchain.com/">Docs</a>
+        </li>
+      </ul>
+      <div id="searchbox" role="search">
+          <div class="searchformwrapper">
+          <form class="search" action="search.html" method="get">
+            <input class="sk-search-text-input" type="text" name="q" aria-labelledby="searchlabel" />
+            <input class="sk-search-text-btn" type="submit" value="Go" />
+          </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    <div class="d-flex" id="sk-doc-wrapper">
+        <input type="checkbox" name="sk-toggle-checkbox" id="sk-toggle-checkbox">
+        <label id="sk-sidemenu-toggle" class="sk-btn-toggle-toc btn sk-btn-primary"
+               for="sk-toggle-checkbox">Toggle Menu</label>
+        <div id="sk-sidebar-wrapper" class="border-right">
+            <div class="sk-sidebar-toc-wrapper">
+                    <div class="sk-sidebar-toc">
+                        <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">langchain_google_vertexai</span></code> 1.0.6</a><ul>
+<li><a class="reference internal" href="#module-langchain_google_vertexai.callbacks"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.callbacks</span></code></a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-langchain_google_vertexai.chains"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.chains</span></code></a><ul>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-langchain_google_vertexai.chat_models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.chat_models</span></code></a><ul>
+<li><a class="reference internal" href="#id1">Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-langchain_google_vertexai.embeddings"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.embeddings</span></code></a><ul>
+<li><a class="reference internal" href="#id2">Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-langchain_google_vertexai.evaluators"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.evaluators</span></code></a><ul>
+<li><a class="reference internal" href="#id3">Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-langchain_google_vertexai.functions_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.functions_utils</span></code></a><ul>
+<li><a class="reference internal" href="#id4">Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-langchain_google_vertexai.gemma"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.gemma</span></code></a><ul>
+<li><a class="reference internal" href="#id5">Classes</a></li>
+<li><a class="reference internal" href="#id6">Functions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-langchain_google_vertexai.llms"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.llms</span></code></a><ul>
+<li><a class="reference internal" href="#id7">Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-langchain_google_vertexai.model_garden"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.model_garden</span></code></a><ul>
+<li><a class="reference internal" href="#id8">Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-langchain_google_vertexai.vectorstores"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.vectorstores</span></code></a><ul>
+<li><a class="reference internal" href="#id9">Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-langchain_google_vertexai.vision_models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.vision_models</span></code></a><ul>
+<li><a class="reference internal" href="#id10">Classes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                    </div>
+            </div>
+        </div>
+        <div id="sk-page-content-wrapper">
+            <div class="sk-page-content container-fluid body px-md-3" role="main">
+                
+  <section id="langchain-google-vertexai-1-0-6">
+<h1><code class="docutils literal notranslate"><span class="pre">langchain_google_vertexai</span></code> 1.0.6<a class="headerlink" href="#langchain-google-vertexai-1-0-6" title="Permalink to this heading">¶</a></h1>
+<section id="module-langchain_google_vertexai.callbacks">
+<span id="langchain-google-vertexai-callbacks"></span><h2><a class="reference internal" href="#module-langchain_google_vertexai.callbacks" title="langchain_google_vertexai.callbacks"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.callbacks</span></code></a><a class="headerlink" href="#module-langchain_google_vertexai.callbacks" title="Permalink to this heading">¶</a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="callbacks/langchain_google_vertexai.callbacks.VertexAICallbackHandler.html#langchain_google_vertexai.callbacks.VertexAICallbackHandler" title="langchain_google_vertexai.callbacks.VertexAICallbackHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callbacks.VertexAICallbackHandler</span></code></a>()</p></td>
+<td><p>Callback Handler that tracks VertexAI info.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-langchain_google_vertexai.chains">
+<span id="langchain-google-vertexai-chains"></span><h2><a class="reference internal" href="#module-langchain_google_vertexai.chains" title="langchain_google_vertexai.chains"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.chains</span></code></a><a class="headerlink" href="#module-langchain_google_vertexai.chains" title="Permalink to this heading">¶</a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="chains/langchain_google_vertexai.chains.create_structured_runnable.html#langchain_google_vertexai.chains.create_structured_runnable" title="langchain_google_vertexai.chains.create_structured_runnable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chains.create_structured_runnable</span></code></a>(function, ...)</p></td>
+<td><p>Create a runnable sequence that uses OpenAI functions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="chains/langchain_google_vertexai.chains.get_output_parser.html#langchain_google_vertexai.chains.get_output_parser" title="langchain_google_vertexai.chains.get_output_parser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chains.get_output_parser</span></code></a>(functions)</p></td>
+<td><p>Get the appropriate function output parser given the user functions.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-langchain_google_vertexai.chat_models">
+<span id="langchain-google-vertexai-chat-models"></span><h2><a class="reference internal" href="#module-langchain_google_vertexai.chat_models" title="langchain_google_vertexai.chat_models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.chat_models</span></code></a><a class="headerlink" href="#module-langchain_google_vertexai.chat_models" title="Permalink to this heading">¶</a></h2>
+<p>Wrapper around Google VertexAI chat-based models.</p>
+<section id="id1">
+<h3>Classes<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="chat_models/langchain_google_vertexai.chat_models.ChatVertexAI.html#langchain_google_vertexai.chat_models.ChatVertexAI" title="langchain_google_vertexai.chat_models.ChatVertexAI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chat_models.ChatVertexAI</span></code></a></p></td>
+<td><p>Google Cloud Vertex AI chat model integration.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-langchain_google_vertexai.embeddings">
+<span id="langchain-google-vertexai-embeddings"></span><h2><a class="reference internal" href="#module-langchain_google_vertexai.embeddings" title="langchain_google_vertexai.embeddings"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.embeddings</span></code></a><a class="headerlink" href="#module-langchain_google_vertexai.embeddings" title="Permalink to this heading">¶</a></h2>
+<section id="id2">
+<h3>Classes<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="embeddings/langchain_google_vertexai.embeddings.GoogleEmbeddingModelType.html#langchain_google_vertexai.embeddings.GoogleEmbeddingModelType" title="langchain_google_vertexai.embeddings.GoogleEmbeddingModelType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">embeddings.GoogleEmbeddingModelType</span></code></a>(value)</p></td>
+<td><p>An enumeration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="embeddings/langchain_google_vertexai.embeddings.GoogleEmbeddingModelVersion.html#langchain_google_vertexai.embeddings.GoogleEmbeddingModelVersion" title="langchain_google_vertexai.embeddings.GoogleEmbeddingModelVersion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">embeddings.GoogleEmbeddingModelVersion</span></code></a>(value)</p></td>
+<td><p>An enumeration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="embeddings/langchain_google_vertexai.embeddings.VertexAIEmbeddings.html#langchain_google_vertexai.embeddings.VertexAIEmbeddings" title="langchain_google_vertexai.embeddings.VertexAIEmbeddings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">embeddings.VertexAIEmbeddings</span></code></a></p></td>
+<td><p>Google Cloud VertexAI embedding models.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-langchain_google_vertexai.evaluators">
+<span id="langchain-google-vertexai-evaluators"></span><h2><a class="reference internal" href="#module-langchain_google_vertexai.evaluators" title="langchain_google_vertexai.evaluators"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.evaluators</span></code></a><a class="headerlink" href="#module-langchain_google_vertexai.evaluators" title="Permalink to this heading">¶</a></h2>
+<section id="id3">
+<h3>Classes<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="evaluators/langchain_google_vertexai.evaluators.evaluation.VertexPairWiseStringEvaluator.html#langchain_google_vertexai.evaluators.evaluation.VertexPairWiseStringEvaluator" title="langchain_google_vertexai.evaluators.evaluation.VertexPairWiseStringEvaluator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluators.evaluation.VertexPairWiseStringEvaluator</span></code></a>(...)</p></td>
+<td><p>Evaluate the perplexity of a predicted string.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="evaluators/langchain_google_vertexai.evaluators.evaluation.VertexStringEvaluator.html#langchain_google_vertexai.evaluators.evaluation.VertexStringEvaluator" title="langchain_google_vertexai.evaluators.evaluation.VertexStringEvaluator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluators.evaluation.VertexStringEvaluator</span></code></a>(...)</p></td>
+<td><p>Evaluate the perplexity of a predicted string.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-langchain_google_vertexai.functions_utils">
+<span id="langchain-google-vertexai-functions-utils"></span><h2><a class="reference internal" href="#module-langchain_google_vertexai.functions_utils" title="langchain_google_vertexai.functions_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.functions_utils</span></code></a><a class="headerlink" href="#module-langchain_google_vertexai.functions_utils" title="Permalink to this heading">¶</a></h2>
+<section id="id4">
+<h3>Classes<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="functions_utils/langchain_google_vertexai.functions_utils.PydanticFunctionsOutputParser.html#langchain_google_vertexai.functions_utils.PydanticFunctionsOutputParser" title="langchain_google_vertexai.functions_utils.PydanticFunctionsOutputParser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">functions_utils.PydanticFunctionsOutputParser</span></code></a></p></td>
+<td><p>Parse an output as a pydantic object.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-langchain_google_vertexai.gemma">
+<span id="langchain-google-vertexai-gemma"></span><h2><a class="reference internal" href="#module-langchain_google_vertexai.gemma" title="langchain_google_vertexai.gemma"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.gemma</span></code></a><a class="headerlink" href="#module-langchain_google_vertexai.gemma" title="Permalink to this heading">¶</a></h2>
+<section id="id5">
+<h3>Classes<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="gemma/langchain_google_vertexai.gemma.GemmaChatLocalHF.html#langchain_google_vertexai.gemma.GemmaChatLocalHF" title="langchain_google_vertexai.gemma.GemmaChatLocalHF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gemma.GemmaChatLocalHF</span></code></a></p></td>
+<td><p>Create a new model by parsing and validating input data from keyword arguments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="gemma/langchain_google_vertexai.gemma.GemmaChatLocalKaggle.html#langchain_google_vertexai.gemma.GemmaChatLocalKaggle" title="langchain_google_vertexai.gemma.GemmaChatLocalKaggle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gemma.GemmaChatLocalKaggle</span></code></a></p></td>
+<td><p>Needed for mypy typing to recognize model_name as a valid arg.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="gemma/langchain_google_vertexai.gemma.GemmaChatVertexAIModelGarden.html#langchain_google_vertexai.gemma.GemmaChatVertexAIModelGarden" title="langchain_google_vertexai.gemma.GemmaChatVertexAIModelGarden"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gemma.GemmaChatVertexAIModelGarden</span></code></a></p></td>
+<td><p>Needed for mypy typing to recognize model_name as a valid arg.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="gemma/langchain_google_vertexai.gemma.GemmaLocalHF.html#langchain_google_vertexai.gemma.GemmaLocalHF" title="langchain_google_vertexai.gemma.GemmaLocalHF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gemma.GemmaLocalHF</span></code></a></p></td>
+<td><p>Local gemma model loaded from HuggingFace.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="gemma/langchain_google_vertexai.gemma.GemmaLocalKaggle.html#langchain_google_vertexai.gemma.GemmaLocalKaggle" title="langchain_google_vertexai.gemma.GemmaLocalKaggle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gemma.GemmaLocalKaggle</span></code></a></p></td>
+<td><p>Local gemma chat model loaded from Kaggle.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="gemma/langchain_google_vertexai.gemma.GemmaVertexAIModelGarden.html#langchain_google_vertexai.gemma.GemmaVertexAIModelGarden" title="langchain_google_vertexai.gemma.GemmaVertexAIModelGarden"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gemma.GemmaVertexAIModelGarden</span></code></a></p></td>
+<td><p>Create a new model by parsing and validating input data from keyword arguments.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id6">
+<h3>Functions<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="gemma/langchain_google_vertexai.gemma.gemma_messages_to_prompt.html#langchain_google_vertexai.gemma.gemma_messages_to_prompt" title="langchain_google_vertexai.gemma.gemma_messages_to_prompt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gemma.gemma_messages_to_prompt</span></code></a>(history)</p></td>
+<td><p>Converts a list of messages to a chat prompt for Gemma.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-langchain_google_vertexai.llms">
+<span id="langchain-google-vertexai-llms"></span><h2><a class="reference internal" href="#module-langchain_google_vertexai.llms" title="langchain_google_vertexai.llms"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.llms</span></code></a><a class="headerlink" href="#module-langchain_google_vertexai.llms" title="Permalink to this heading">¶</a></h2>
+<section id="id7">
+<h3>Classes<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="llms/langchain_google_vertexai.llms.VertexAI.html#langchain_google_vertexai.llms.VertexAI" title="langchain_google_vertexai.llms.VertexAI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">llms.VertexAI</span></code></a></p></td>
+<td><p>Google Vertex AI large language models.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-langchain_google_vertexai.model_garden">
+<span id="langchain-google-vertexai-model-garden"></span><h2><a class="reference internal" href="#module-langchain_google_vertexai.model_garden" title="langchain_google_vertexai.model_garden"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.model_garden</span></code></a><a class="headerlink" href="#module-langchain_google_vertexai.model_garden" title="Permalink to this heading">¶</a></h2>
+<section id="id8">
+<h3>Classes<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="model_garden/langchain_google_vertexai.model_garden.ChatAnthropicVertex.html#langchain_google_vertexai.model_garden.ChatAnthropicVertex" title="langchain_google_vertexai.model_garden.ChatAnthropicVertex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_garden.ChatAnthropicVertex</span></code></a></p></td>
+<td><p>Create a new model by parsing and validating input data from keyword arguments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="model_garden/langchain_google_vertexai.model_garden.VertexAIModelGarden.html#langchain_google_vertexai.model_garden.VertexAIModelGarden" title="langchain_google_vertexai.model_garden.VertexAIModelGarden"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_garden.VertexAIModelGarden</span></code></a></p></td>
+<td><p>Large language models served from Vertex AI Model Garden.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-langchain_google_vertexai.vectorstores">
+<span id="langchain-google-vertexai-vectorstores"></span><h2><a class="reference internal" href="#module-langchain_google_vertexai.vectorstores" title="langchain_google_vertexai.vectorstores"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.vectorstores</span></code></a><a class="headerlink" href="#module-langchain_google_vertexai.vectorstores" title="Permalink to this heading">¶</a></h2>
+<section id="id9">
+<h3>Classes<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="vectorstores/langchain_google_vertexai.vectorstores.document_storage.DataStoreDocumentStorage.html#langchain_google_vertexai.vectorstores.document_storage.DataStoreDocumentStorage" title="langchain_google_vertexai.vectorstores.document_storage.DataStoreDocumentStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectorstores.document_storage.DataStoreDocumentStorage</span></code></a>(...)</p></td>
+<td><p>Stores documents in Google Cloud DataStore.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="vectorstores/langchain_google_vertexai.vectorstores.document_storage.DocumentStorage.html#langchain_google_vertexai.vectorstores.document_storage.DocumentStorage" title="langchain_google_vertexai.vectorstores.document_storage.DocumentStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectorstores.document_storage.DocumentStorage</span></code></a>()</p></td>
+<td><p>Abstract interface of a key, text storage for retrieving documents.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="vectorstores/langchain_google_vertexai.vectorstores.document_storage.GCSDocumentStorage.html#langchain_google_vertexai.vectorstores.document_storage.GCSDocumentStorage" title="langchain_google_vertexai.vectorstores.document_storage.GCSDocumentStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectorstores.document_storage.GCSDocumentStorage</span></code></a>(bucket)</p></td>
+<td><p>Stores documents in Google Cloud Storage.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="vectorstores/langchain_google_vertexai.vectorstores.vectorstores.VectorSearchVectorStore.html#langchain_google_vertexai.vectorstores.vectorstores.VectorSearchVectorStore" title="langchain_google_vertexai.vectorstores.vectorstores.VectorSearchVectorStore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectorstores.vectorstores.VectorSearchVectorStore</span></code></a>(...)</p></td>
+<td><p>VertexAI VectorStore that handles the search and indexing using Vector Search and stores the documents in Google Cloud Storage.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="vectorstores/langchain_google_vertexai.vectorstores.vectorstores.VectorSearchVectorStoreDatastore.html#langchain_google_vertexai.vectorstores.vectorstores.VectorSearchVectorStoreDatastore" title="langchain_google_vertexai.vectorstores.vectorstores.VectorSearchVectorStoreDatastore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectorstores.vectorstores.VectorSearchVectorStoreDatastore</span></code></a>(...)</p></td>
+<td><p>VectorSearch with DatasTore document storage.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="vectorstores/langchain_google_vertexai.vectorstores.vectorstores.VectorSearchVectorStoreGCS.html#langchain_google_vertexai.vectorstores.vectorstores.VectorSearchVectorStoreGCS" title="langchain_google_vertexai.vectorstores.vectorstores.VectorSearchVectorStoreGCS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectorstores.vectorstores.VectorSearchVectorStoreGCS</span></code></a>(...)</p></td>
+<td><p>Alias of <cite>VectorSearchVectorStore</cite> for consistency with the rest of vector stores with different document storage backends.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-langchain_google_vertexai.vision_models">
+<span id="langchain-google-vertexai-vision-models"></span><h2><a class="reference internal" href="#module-langchain_google_vertexai.vision_models" title="langchain_google_vertexai.vision_models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain_google_vertexai.vision_models</span></code></a><a class="headerlink" href="#module-langchain_google_vertexai.vision_models" title="Permalink to this heading">¶</a></h2>
+<section id="id10">
+<h3>Classes<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="vision_models/langchain_google_vertexai.vision_models.VertexAIImageCaptioning.html#langchain_google_vertexai.vision_models.VertexAIImageCaptioning" title="langchain_google_vertexai.vision_models.VertexAIImageCaptioning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vision_models.VertexAIImageCaptioning</span></code></a></p></td>
+<td><p>Implementation of the Image Captioning model as an LLM.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="vision_models/langchain_google_vertexai.vision_models.VertexAIImageCaptioningChat.html#langchain_google_vertexai.vision_models.VertexAIImageCaptioningChat" title="langchain_google_vertexai.vision_models.VertexAIImageCaptioningChat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vision_models.VertexAIImageCaptioningChat</span></code></a></p></td>
+<td><p>Implementation of the Image Captioning model as a chat.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="vision_models/langchain_google_vertexai.vision_models.VertexAIImageEditorChat.html#langchain_google_vertexai.vision_models.VertexAIImageEditorChat" title="langchain_google_vertexai.vision_models.VertexAIImageEditorChat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vision_models.VertexAIImageEditorChat</span></code></a></p></td>
+<td><p>Given an image and a prompt, edits the image.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="vision_models/langchain_google_vertexai.vision_models.VertexAIImageGeneratorChat.html#langchain_google_vertexai.vision_models.VertexAIImageGeneratorChat" title="langchain_google_vertexai.vision_models.VertexAIImageGeneratorChat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vision_models.VertexAIImageGeneratorChat</span></code></a></p></td>
+<td><p>Generates an image from a prompt.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="vision_models/langchain_google_vertexai.vision_models.VertexAIVisualQnAChat.html#langchain_google_vertexai.vision_models.VertexAIVisualQnAChat" title="langchain_google_vertexai.vision_models.VertexAIVisualQnAChat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vision_models.VertexAIVisualQnAChat</span></code></a></p></td>
+<td><p>Chat implementation of a visual QnA model</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+            </div>
+            <div class="container">
+                <footer class="sk-content-footer">
+                                &copy; 2023, LangChain, Inc.
+                                    .
+                            Last updated
+                                on Jun 28, 2024.
+                </footer>
+            </div>
+        </div>
+    </div>
+<script src="_static/js/vendor/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+    /* Add a [>>>] button on the top-right corner of code samples to hide
+     * the >>> and ... prompts and the output and thus make the code
+     * copyable. */
+    var div = $('.highlight-python .highlight,' +
+                '.highlight-python3 .highlight,' +
+                '.highlight-pycon .highlight,' +
+		'.highlight-default .highlight')
+    var pre = div.find('pre');
+
+    // get the styles from the current theme
+    pre.parent().parent().css('position', 'relative');
+    var hide_text = 'Hide prompts and outputs';
+    var show_text = 'Show prompts and outputs';
+
+    // create and add the button to all the code blocks that contain >>>
+    div.each(function(index) {
+        var jthis = $(this);
+        if (jthis.find('.gp').length > 0) {
+            var button = $('<span class="copybutton">&gt;&gt;&gt;</span>');
+            button.attr('title', hide_text);
+            button.data('hidden', 'false');
+            jthis.prepend(button);
+        }
+        // tracebacks (.gt) contain bare text elements that need to be
+        // wrapped in a span to work with .nextUntil() (see later)
+        jthis.find('pre:has(.gt)').contents().filter(function() {
+            return ((this.nodeType == 3) && (this.data.trim().length > 0));
+        }).wrap('<span>');
+    });
+
+    // define the behavior of the button when it's clicked
+    $('.copybutton').click(function(e){
+        e.preventDefault();
+        var button = $(this);
+        if (button.data('hidden') === 'false') {
+            // hide the code output
+            button.parent().find('.go, .gp, .gt').hide();
+            button.next('pre').find('.gt').nextUntil('.gp, .go').css('visibility', 'hidden');
+            button.css('text-decoration', 'line-through');
+            button.attr('title', show_text);
+            button.data('hidden', 'true');
+        } else {
+            // show the code output
+            button.parent().find('.go, .gp, .gt').show();
+            button.next('pre').find('.gt').nextUntil('.gp, .go').css('visibility', 'visible');
+            button.css('text-decoration', 'none');
+            button.attr('title', hide_text);
+            button.data('hidden', 'false');
+        }
+    });
+
+	/*** Add permalink buttons next to glossary terms ***/
+	$('dl.glossary > dt[id]').append(function() {
+		return ('<a class="headerlink" href="#' +
+			    this.getAttribute('id') +
+			    '" title="Permalink to this term">¶</a>');
+	});
+});
+
+</script>
+    
+</body>
+</html>
