@@ -26,10 +26,23 @@ def ingest_docs():
         doc.metadata.update({"source": new_url})
 
     print(f"Going to add {len(documents)} to Pinecone")
-    PineconeVectorStore.from_documents(
-        documents, embeddings, index_name="documentation-helper"
+ 
+    # Create the vector store 
+    vectorstore = PineconeVectorStore(
+        embedding=embeddings,
+        index_name="documentation-helper"
     )
-    print("****Loading to vectorstore done ***")
+    
+    # Define batch size
+    batch_size = 100
+    
+    # Loop through documents in batches
+    for i in range(0, len(documents), batch_size):
+        batch = documents[i:i + batch_size]
+        vectorstore.add_documents(batch)
+        print(f"Uploaded batch {i // batch_size + 1} with {len(batch)} documents")
+    
+    print("****Loading to vectorstore done ****")
 
 
 if __name__ == "__main__":
