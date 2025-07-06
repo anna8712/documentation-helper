@@ -1,8 +1,34 @@
 from backend.core import run_llm
 import streamlit as st
 from typing import Set
+import requests
+from PIL import Image
+from io import BytesIO
 
-st.header("LangChain Udemy Course- Documentation Helper Bot")
+
+def get_profile_picture(email: str):
+    gravatar_url = f"https://www.gravatar.com/avatar/{hash(email)}?d=identicon"
+    response = requests.get(gravatar_url)
+    image = Image.open(BytesIO(response.content))
+    return image
+
+
+# Sidebar with user information
+with st.sidebar:
+    st.header("LangChain Udemy Course- Helper Bot")
+    st.title("👤 User Profile")
+
+    # User data
+    user_email = "john.doe@example.com"
+    user_name = "John Doe"
+
+    # Get and display profile picture
+    profile_pic = get_profile_picture(user_email)
+    st.image(profile_pic, width=150)
+    st.write(f"**Name:** {user_name}")
+    st.write(f"**Email:** {user_email}")
+
+    st.header("LangChain Udemy Course- Documentation Helper Bot")
 
 prompt = st.text_input("Prompt", placeholder="Enter your prompt here..")
 
